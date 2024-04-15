@@ -6,6 +6,8 @@ import Logo from './logo';
 import { ModeToggle } from '@/components/mode-toggle';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Menu } from 'lucide-react';
+import MobileMenu from './mobile-menu';
 
 const Navbar = () => {
   const scrolled = useScrollTop();
@@ -23,14 +25,25 @@ const Navbar = () => {
 
           <nav className="flex items-center gap-4 text-sm lg:gap-6">
             <Button variant={'ghost'} size={'sm'} asChild>
-              <Link href={'#'}>문제은행</Link>
+              <Link href={'/problem-bank'}>문제은행</Link>
             </Button>
             <Button variant={'ghost'} size={'sm'} asChild>
-              <Link href={'#'}>커뮤니티</Link>
+              <Link href={'/community'}>커뮤니티</Link>
             </Button>
           </nav>
         </div>
-        <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
+        <MobileMenu />
+
+        <div className="md:ml-auto justify-end w-full flex items-center gap-x-2">
+          <>
+            <Button variant={'ghost'} size={'sm'}>
+              로그인
+            </Button>
+
+            <Button size={'sm'}>
+              <Link href={'#'}>회원가입</Link>
+            </Button>
+          </>
           <ModeToggle />
         </div>
       </div>
