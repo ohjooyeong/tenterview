@@ -1,0 +1,52 @@
+import React from "react";
+import { Tabs } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
+
+export default function TabLayout() {
+  return (
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: "#3F51B5",
+        tabBarInactiveTintColor: "#94A3B8",
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          tabBarLabel: () => null,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" color={color} size={size || 24} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="questions/[id]"
+        options={{
+          tabBarLabel: () => null,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="list" color={color} size={size || 24} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="practice/daily"
+        options={{
+          tabBarLabel: () => null,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="play" color={color} size={size || 24} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="practice/random"
+        options={{
+          tabBarLabel: () => null,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" color={color} size={size || 24} />
+          ),
+        }}
+      />
+    </Tabs>
+  );
+}
