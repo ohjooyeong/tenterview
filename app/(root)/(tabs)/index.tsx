@@ -39,6 +39,24 @@ export default function Home() {
 
         <View className="px-4 mb-6">
           <Text className="text-lg font-semibold text-gray-900 mb-3">
+            학습 현황
+          </Text>
+          <View className="bg-white border border-gray-200 rounded-lg p-4">
+            <View className="flex-row justify-between">
+              <View>
+                <Text className="text-gray-500">오늘 푼 문제</Text>
+                <Text className="text-2xl font-bold text-gray-900">3</Text>
+              </View>
+              <View>
+                <Text className="text-gray-500">연속 학습</Text>
+                <Text className="text-2xl font-bold text-gray-900">5일</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+
+        <View className="px-4 mb-6">
+          <Text className="text-lg font-semibold text-gray-900 mb-3">
             카테고리
           </Text>
           <View className="grid grid-cols-2 gap-3">
@@ -63,24 +81,6 @@ export default function Home() {
                 </Pressable>
               </Link>
             ))}
-          </View>
-        </View>
-
-        <View className="px-4 mb-6">
-          <Text className="text-lg font-semibold text-gray-900 mb-3">
-            학습 현황
-          </Text>
-          <View className="bg-white border border-gray-200 rounded-lg p-4">
-            <View className="flex-row justify-between">
-              <View>
-                <Text className="text-gray-500">오늘 푼 문제</Text>
-                <Text className="text-2xl font-bold text-gray-900">3</Text>
-              </View>
-              <View>
-                <Text className="text-gray-500">연속 학습</Text>
-                <Text className="text-2xl font-bold text-gray-900">5일</Text>
-              </View>
-            </View>
           </View>
         </View>
       </ScrollView>

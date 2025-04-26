@@ -29,24 +29,6 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="practice/daily"
-        options={{
-          tabBarLabel: () => null,
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="play" color={color} size={size || 24} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="practice/random"
-        options={{
-          tabBarLabel: () => null,
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person" color={color} size={size || 24} />
-          ),
-        }}
-      />
     </Tabs>
   );
 }
