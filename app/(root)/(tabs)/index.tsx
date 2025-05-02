@@ -64,9 +64,9 @@ export default function Home() {
               <Link
                 key={category.id}
                 href={{
-                  pathname: `/questions/[id]`,
+                  pathname: "/(root)/questions",
                   params: {
-                    id: category.id,
+                    category_id: category.id,
                   },
                 }}
                 asChild
